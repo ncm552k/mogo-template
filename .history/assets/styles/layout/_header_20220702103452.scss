@@ -1,0 +1,236 @@
+.header {
+  min-height: 100rem;
+  background: linear-gradient(
+      to bottom,
+      rgba($primary-color, 0.8),
+      rgba($secondary-color, 0.8)
+    ),
+    url("../images/img-header-bg.jpg") no-repeat center / cover;
+  color: white;
+
+
+    &-toggle{
+        display: none;
+    }
+
+  &-logo {
+    font-size: 3rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  &-menu-link {
+    color: white;
+    text-transform: uppercase;
+    display: inline-block;
+    padding-bottom: 1rem;
+    border-bottom: solid 0.4rem transparent;
+    transition: all 0.25s linear;
+
+    &:hover {
+      border-bottom: solid 0.4rem $secondary-color;
+      color: $secondary-color;
+    }
+  }
+
+  &-top {
+    padding-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  &-menu {
+    display: flex;
+
+    &-item:not(:first-child) {
+      margin-left: 5rem;
+    }
+  }
+
+
+
+  &-content {
+    padding-top: 17rem;
+    text-align: center;
+    max-width: 80rem;
+    margin: 0 auto;
+
+    &-caption {
+      font-size: 7.2rem;
+      font-family: $third-font;
+      margin-bottom: 3rem;
+    }
+
+    &-main {
+      font-size: 15rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-bottom: 5rem;
+      margin-bottom: 5rem;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6rem;
+        height: 0.5rem;
+        background-color: #fff;
+      }
+    }
+
+    &-more {
+      text-transform: uppercase;
+      color: white;
+      padding: 1rem 3rem;
+      border: 4px solid white;
+      font-weight: bold;
+      display: inline-block;
+    }
+  }
+
+  &-bottom {
+    margin-top: 15.5rem;
+    padding-bottom: 2.5rem;
+    display: flex;
+    flex-wrap: wrap;
+
+    &-item {
+      padding-top: 2.5rem;
+      border-top: 5px solid white;
+      width: calc(25% - 30px);
+      margin-left: 30px;
+      cursor: pointer;
+      opacity: 0.6;
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        height: 5px;
+        width: 7rem;
+        top: 0;
+        left: 0;
+        background-color: $primary-color;
+        transform: translateY(-100%);
+        opacity: 0;
+        transition: all 0.25s linear;
+      }
+    }
+
+    &-item:hover,
+    &-item.is-active {
+      opacity: 1;
+
+      &::before {
+        opacity: 1;
+      }
+    }
+
+    &-number {
+      font-weight: bold;
+      font-size: 2.4rem;
+    }
+
+    &-text {
+      margin-left: 1rem;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+    }
+  }
+
+  @media screen and (max-width: 1023px) {
+    min-height: unset;
+    .header-bottom {
+      margin-top: 10.5rem;
+    }
+    .header-content {
+      padding-top: 10rem;
+      min-height: unset;
+
+      &-main {
+        font-size: 10rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+
+    .header-bottom-text {
+      display: none;
+    }
+
+    .header-bottom {
+      margin-top: 5rem;
+    }
+    .header-content {
+      padding-top: 5rem;
+
+      &-caption {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      &-main {
+        font-size: 5rem;
+        margin-bottom: 3rem;
+        padding-bottom: 3rem;
+      }
+    }
+
+    .header-bottom-item {
+        text-align: center;
+        padding-top: 1.5rem;
+  
+        &::before {
+          width: 35%;
+        }
+    }
+
+    .header-menu{
+        position: fixed;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background-color: white;
+        width: 300px;
+        display: block;
+        padding: 2rem 2.5rem;
+        z-index: 10;
+        transform: translateX(100%);
+        transition: transfrom 2.5s ease-in;
+
+        &-item {
+            margin-left: 0;
+            margin-bottom: 1rem;
+        }
+
+        &-link, &-icon {
+            color: $title-color;
+            width: 100%;
+            padding: 1.5rem;
+            border-radius: 4px;
+            display: block;
+        }
+
+        &-link:hover {
+            color: white;
+            background-color: $secondary-color;
+        }
+    }
+
+    .header-menu.is-expand{
+        transform: translateX(0%);
+    }
+
+    .header-toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        align-self: center;
+    }
+  }
+}

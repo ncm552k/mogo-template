@@ -1,0 +1,46 @@
+.quote{
+    background-color: $gray-color;
+    padding: 6.5rem 0;
+
+    &-container{
+        @include flex(row,center,center,null);
+    }
+
+    &-arrow{
+        color: $gray-dark-color;
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 2rem;
+    }
+
+    &-content{
+        padding: 0 5.5rem;
+        @include flex(row,center,center,null);
+    }
+
+    &-icon{
+        @include size(15rem);
+        @include flex(row,center,center,null);
+        border: 3px solid $third-color;
+        flex-shrink: 0;
+    }
+
+    &-info{
+        padding-left: 6rem;
+    }
+
+    &-desc{
+        font-size:2.5rem;
+        font-weight: 300;
+        line-height: 1.6;
+        font-family: $secondary-font;
+        margin-bottom: 2.5rem;
+        font-style: italic;
+        color: $text-color;
+
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+    }
+}

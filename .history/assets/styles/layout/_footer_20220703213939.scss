@@ -1,0 +1,14 @@
+.footer{
+    &-top{
+        padding: 7.5rem 0 7rem;
+    }
+
+    &-logo{
+        font-weight: 500;
+    }
+
+    &-heading{
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}

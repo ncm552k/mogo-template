@@ -1,0 +1,9 @@
+.number{
+    background-color: $third-color;
+    
+    &-item{
+        padding: 8.5rem;
+        color: white;
+        border-left: 1px solid white;
+    }
+}

@@ -1,0 +1,24 @@
+.work{
+    padding-top: 10rem;
+
+    &-item{
+        position: relative;
+        
+        &:hover .work-content{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &-content{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        @include flex(column, center, center, null);
+        background-image: linear-gradient( to bottom,rgba($primary-color,0.8) ,rgba($secondary-color, 0.8));
+    }
+}

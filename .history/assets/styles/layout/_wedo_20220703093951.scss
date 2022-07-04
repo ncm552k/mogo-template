@@ -1,0 +1,74 @@
+.wedo{
+    padding: 10rem 0;
+
+    &-container{
+        @include flex(row, space-between, null, null);
+    }
+
+    &-content,
+    &-image{
+        width: calc(50% - 1.5rem);
+    }
+
+    &-image{
+        object-fit: cover;
+    }
+
+    &-item{
+
+        &-header{
+            @include flex(row,null, center, null);
+            padding: 1.5rem;
+            border: 1px solid $gray-light-color;
+            cursor: pointer;
+        }
+
+        &-icon{
+            margin-right: 1.5rem;
+        }
+
+        &-title{
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        &-arrow{
+            margin-left: auto;
+            color: $gray-dark-color;
+            font-size: 3rem;
+        }
+
+        &-content{
+            padding: 2rem;
+            border: 1px solid $gray-light-color;
+            border-top: 0;
+            font-size: 1.5rem;
+            font-family: $secondary-font;
+            font-style: italic;
+            line-height: 1.6;
+            color: $text-color;
+            font-weight: 300;
+            display: none;
+        }
+
+        &-text{
+            height: 13rem;
+            overflow: auto;
+            padding-right: 2rem;
+
+            &::-webkit-scrollbar {
+                width: .6rem;
+              }
+               
+              &::-webkit-scrollbar-track {
+                background-color: $gray-light-color;
+                border-radius: 2rem;
+              }
+               
+              &::-webkit-scrollbar-thumb {
+                background-color: $third-color;
+                border-radius: 2rem;
+              }
+        }
+    }
+}

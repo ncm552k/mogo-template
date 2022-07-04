@@ -1,0 +1,24 @@
+.map{
+    padding: 6rem 0;
+    background: linear-gradient(to bottom, rgba(white, 0.7), rgba(white, 0.6)),
+    url("../images/img-map.png") no-repeat center / cover;
+
+    &-content{
+        @include flex(column, center, center, null);
+    }
+
+    &-heading{
+        position: relative;
+        font-size: 2.4rem;
+        font-weight: bold;
+        color: $primary-color;
+        
+        &::before{
+            content: "";
+            @include size(6.5rem, 4px);
+            @include absoluteCenter();
+            background-color: $primary-color;
+            bottom: 0;
+        }
+    }
+}

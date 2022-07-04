@@ -1,0 +1,8 @@
+.quote{
+    background-color: $gray-color;
+    padding: 6.5rem 0;
+
+    &-container{
+        @include flex(row,center,center,null);
+    }
+}

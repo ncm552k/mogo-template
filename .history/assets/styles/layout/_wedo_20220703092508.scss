@@ -1,0 +1,40 @@
+.wedo{
+    padding: 10rem 0;
+
+    &-container{
+        @include flex(row, space-between, null, null);
+    }
+
+    &-content,
+    &-image{
+        width: calc(50% - 1.5rem);
+    }
+
+    &-image{
+        object-fit: cover;
+    }
+
+    &-item{
+
+        &-header{
+            @include flex(row,null, center, null);
+            padding: 1.5rem;
+            border: 1px solid $gray-dark-color;
+            cursor: pointer;
+        }
+
+        &-icon{
+            margin-right: 1.5rem;
+        }
+
+        &-title{
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        &-arrow{
+            margin-left: auto;
+            color: $text-color;
+        }
+    }
+}

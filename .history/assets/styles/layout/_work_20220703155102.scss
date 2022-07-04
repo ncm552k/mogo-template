@@ -1,0 +1,61 @@
+.work{
+    padding-top: 10rem;
+
+    &-list{
+        display: flex;
+        margin: 0 auto;
+    }
+
+    &-column{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    &-item{
+        position: relative;
+        
+        &:hover .work-content{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &--expand{
+            grid-row: 1 /span 2;
+        }
+    }
+
+    &-content{
+        position: absolute;
+        visibility: hidden;
+        opacity: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        @include flex(column, center, center, null);
+        background-image: linear-gradient( to bottom,rgba($primary-color,0.8) ,rgba($secondary-color, 0.8));
+        transition: all .1s linear;
+        color: white;
+        text-align: center;
+        padding: 1.5rem;
+    }
+
+    &-icon{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+    }
+
+    &-title{
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
+    }
+
+    &-desc{
+        font-family: $secondary-font;
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: italic;
+    }
+}

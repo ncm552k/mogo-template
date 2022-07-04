@@ -1,0 +1,7 @@
+.wedo{
+    padding: 10rem 0;
+
+    &-container{
+        @include flex(row, space-between, null, null);
+    }
+}

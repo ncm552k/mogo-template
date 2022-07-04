@@ -1,0 +1,15 @@
+.team{
+    background-color: #fff;
+    padding: 10rem;
+
+    &-info{
+        margin-top: 3rem;
+        text-align: center;
+    }
+
+    &-name{
+        text-transform: uppercase;
+        margin-bottom: 5rem;
+        
+    }
+}

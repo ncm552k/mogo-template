@@ -1,0 +1,19 @@
+.quote{
+    background-color: $gray-color;
+    padding: 6.5rem 0;
+
+    &-container{
+        @include flex(row,center,center,null);
+    }
+
+    &-arrow{
+        color: $gray-dark-color;
+        cursor: pointer;
+        font-size: 2rem;
+        padding: 2rem;
+    }
+
+    &-content{
+        padding: 0 5.5rem;
+    }
+}

@@ -1,0 +1,12 @@
+.story{
+    padding: 10rem 0;
+    background-color: white;
+
+    &-list{
+        @include flex(row,space-between,stretch, null);
+    }
+
+    &-item{
+        width: calc(33.33% - 3rem);
+    }
+}

@@ -1,0 +1,134 @@
+.team{
+    background-color: #fff;
+    padding: 10rem 0;
+
+    &-list{
+        @include flex(row, space-between, stretch, null);
+    }
+
+    &-item{
+        width: calc(33.33% - 2rem);
+    }
+
+    &-info{
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+
+    &-name{
+        text-transform: uppercase;
+        margin-bottom: 1.5rem;
+        font-weight: 500;
+    }
+
+    &-position{
+        font-size: 1.5rem;
+        font-weight: 300;
+        font-style: italic;
+        color: $text-color;
+    }
+
+    &-main{
+        position: relative;
+        transition: all .1s linear;
+
+        &:hover {
+            transform: translate(-1rem, -1rem);
+            box-shadow: 1rem 1rem $third-color;
+        }
+
+        &::before{
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            background-image: linear-gradient( to bottom,rgba($primary-color,0.8) ,rgba($secondary-color, 0.8));
+            z-index: 10;
+            visibility: hidden;
+            opacity: 0;
+            transition: all .1s linear;
+        }
+
+        &:hover::before{
+            visibility: visible;
+            opacity: 1;
+        }
+
+        &:hover .team-content{
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+
+    &-content{
+        position: absolute;
+        @include absoluteCenter("top");
+        z-index: 20;
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        visibility: hidden;
+        opacity: 0;
+        transition: all .1s linear;
+    }
+
+    &-social{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+
+        &-item:not(:first-child){
+            border-left: 1px solid $primary-color;
+        }
+
+        &-link{
+            @include flex(row, center,center, null);
+            @include size(6rem);
+            color: $primary-color;
+            font-size: 2rem;
+            background-color: $secondary-color;
+
+            &:hover{
+                color: white;
+                background-color: $primary-color;
+            }
+        }
+    }
+
+    @include maxWidth(1023px){
+        padding:5rem 0;
+
+        &-list{
+            overflow-x: auto;
+            display: inline-flex;
+            scroll-snap-type: x mandatory;
+            -webkit-overflow-scrolling: touch;
+            margin-left: 0;
+            @include hideScroll();
+            width: 100%;
+        }
+
+        &-item{
+            flex-shrink: 0;
+            width: 60%;
+            scroll-snap-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    @include maxWidth(767px){
+        &-image{
+            height: 35rem;
+        }
+        &-item{
+            width: 80%;
+            margin-left: 1rem;
+        }
+    }
+
+}

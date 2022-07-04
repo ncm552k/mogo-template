@@ -1,0 +1,8 @@
+@mixin size($width, $height: $width){
+    width: $width;
+    height: $height;
+}
+
+@mixin flex($direction: row, $content: null, $item: null,){
+
+}

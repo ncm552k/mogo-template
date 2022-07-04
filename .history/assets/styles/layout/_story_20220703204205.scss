@@ -1,0 +1,8 @@
+.story{
+    padding: 10rem 0;
+    background-color: white;
+
+    &-list{
+        @include flex(row,space-between,stretch, null);
+    }
+}

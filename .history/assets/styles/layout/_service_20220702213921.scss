@@ -1,0 +1,13 @@
+.service{
+    padding: 11rem 0 12rem;
+    background-color: white;
+
+    &-list{
+        display: flex;
+        flex-grow: 1;
+    }
+
+    &-item{
+        width: 33.33%;
+    }
+}

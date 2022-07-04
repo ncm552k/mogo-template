@@ -1,0 +1,16 @@
+.footer{
+    &-top{
+        padding: 7.5rem 0 7rem;
+    }
+
+    &-logo{
+        font-size: 4.6rem;
+        font-weight: bold;
+        color: $text-color;
+    }
+
+    &-heading{
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+}
